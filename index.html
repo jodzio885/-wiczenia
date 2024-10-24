@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+
+        const number1 = parseFloat(prompt('Podaj pierwszą liczbę'));
+        const number2 =  parseFloat(prompt('Podaj drugą liczbę'));
+
+        if (isNaN(number1)){
+            document.write('Wpisz poprawne dane');
+        }else if (isNaN(number2)){
+            document.write('Wpisz poprawne dane');
+        }else {
+            document.write(print('<p>wynik: '+ (number1 + number2) + '</p>');
+        }
+    </script>
+</body>
+</html>
