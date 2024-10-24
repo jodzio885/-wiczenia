@@ -9,18 +9,25 @@
     <script src='main.js'></script>
 </head>
 <body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Maiores quasi nesciunt obcaecati voluptas adipisci repellendus quaerat laudantium quibusdam ratione,
+    pariatur autem? Explicabo quo optio, quibusdam ipsam ducimus corporis cupiditate doloribus?</p>
+    
     <script>
 
-        const number1 = parseFloat(prompt('Podaj pierwszą liczbę'));
-        const number2 =  parseFloat(prompt('Podaj drugą liczbę'));
+        const number1 = parseInt(prompt('Podaj pierwszą liczbę'));
+        const number2 = parseInt(prompt('Podaj drugą liczbę'));
 
         if (isNaN(number1)){
             document.write('Wpisz poprawne dane');
+
         }else if (isNaN(number2)){
             document.write('Wpisz poprawne dane');
+
         }else {
             document.write(print('<p>wynik: '+ (number1 + number2) + '</p>');
         }
+
     </script>
 </body>
 </html>
