@@ -1,0 +1,46 @@
+while (true) {
+    // Pobierz liczby od użytkownika
+    let num1 = prompt("Podaj pierwszą liczbę:");
+    let num2 = prompt("Podaj drugą liczbę:");
+    
+    // Konwertuj na liczby
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+
+    // Sprawdź, czy wprowadzono liczby
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Błędne dane wejściowe. Proszę wprowadzić poprawne liczby.");
+        continue; // powrót do początku pętli, jeśli dane są niepoprawne
+    }
+
+    // Pobierz operację od użytkownika
+    let operation = prompt("Wybierz operację: +, -, *, /");
+
+    // Wykonaj odpowiednią operację na podstawie wybranego znaku
+    let result;
+    if (operation === "+") {
+        result = num1 + num2;
+    } else if (operation === "-") {
+        result = num1 - num2;
+    } else if (operation === "*") {
+        result = num1 * num2;
+    } else if (operation === "/") {
+        if (num2 === 0) {
+            alert("Nie można dzielić przez zero.");
+            continue;
+        }
+        result = num1 / num2;
+    } else {
+        alert("Błędna operacja. Wybierz jedną z: +, -, *, /");
+        continue; // powrót do początku pętli, jeśli operacja jest nieprawidłowa
+    }
+
+    // Wyświetl wynik
+    alert("Wynik: " + result);
+
+    // Zakończ program, jeśli użytkownik tego chce
+    let exit = prompt("Czy chcesz zakończyć? (tak/nie)");
+    if (exit.toLowerCase() === "tak") {
+        break; // zakończ pętlę i program
+    }
+}
